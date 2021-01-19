@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain parallax </title>
+    <link rel="stylesheet" href="../css/mountain_parallax.css">
+</head>
+<body>
+    <section class="head" id="section">
+        <img src="../img/parallax/bg.jpg" alt="background" id="background" loading="lazy">
+        <img src="../img/parallax/mountain.png" alt="mountain" id="mountain" loading="lazy">
+        <img src="../img/parallax/moon.png" alt="moon" id="moon" loading="lazy">
+        <img src="../img/parallax/road.png" alt="road" id="road" loading="lazy">
+        <h2 id="txt">MOON-LIGHT</h2>
+    </section>
+
+
+         <div class="content">
+             <h1 class="title">Moonlight parallax </h1>
+            <p class="txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio culpa saepe fuga eveniet qui voluptas reiciendis quis quasi, 
+                adipisci dolor quod placeat excepturi unde nostrum veritatis enim illum. Iusto, totam!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus ipsam odit quos eligendi exercitationem quod voluptatem delectus 
+            veritatis, esse a voluptate vel, itaque accusantium omnis corrupti quas tempore eum? Error.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, et temporibus itaque architecto impedit non aspernatur nemo quam, 
+            illo voluptas aliquid illum omnis eaque amet minus ut consectetur. Atque, vel?
+            <span> &copy;mehul </span>   
+        </p>
+           
+         </div>
+    <script>
+       let background = document.getElementById('background');
+       let mountain = document.getElementById('mountain');
+       let moon = document.getElementById('moon');
+       let road = document.getElementById('road');
+       let txt = document.getElementById('txt');
+       window.addEventListener('scroll', function parallax(){
+        var value = window.scrollY;
+        //console.log(value);
+       // alert(background);
+        background.style.top = value *0.5 + 'px';
+        moon.style.left= -value * 0.5 + 'px';
+        mountain.style.top = -value * 0.15 + 'px';
+        road.style.top = -value * 0.15 + 'px';
+        txt.style.top = value * 1 + 'px';
+
+       })
+        
+  
+    </script>
+</body>
+</html>
