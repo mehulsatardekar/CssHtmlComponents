@@ -1,0 +1,106 @@
+*{
+   box-sizing: border-box;
+}
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: black;
+}
+
+.card{
+    position: relative;
+    height: 400px;
+    width: 600px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 20px;
+    background: linear-gradient(135deg,#d41e31,#491f8f);
+}
+
+.card img{
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform:translate(-50%);
+    height: 400px;
+    transition: 0.5s;
+}
+
+.card:hover img{
+
+    height: 500px;
+    left: 80%;
+}
+
+.card .text{
+    position: relative;
+    width: 50%;
+    left: 20%;
+    transition: 0.5s;
+    padding: 20px 20px 20px 40px;
+    visibility: hidden;
+}
+
+.card:hover .text{
+    width: 50%;
+    left: 5%;
+    visibility: visible;
+}
+
+.card .text h2,p{
+  
+    color: #fff;
+}
+
+.card .text a{
+  
+    font-weight: 800;
+    text-decoration: none;
+    background-color: #fff;
+    padding: 10px 10px 10px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+
+@media (max-width:991px){
+   
+    .card{
+       
+        position: relative;
+        width: auto;
+        max-width: 600px;
+      
+        align-items: flex-start;
+        transition: 0.5s;
+    }
+
+    .card:hover{
+        height: 600px;
+    }
+
+    .card:hover img{
+        left: 50%;
+        height: 350px;
+    }
+
+    .card:hover .text{
+        width: 100%;
+        
+    }
+    .card .text{
+        width: 100%;
+        left: 0%;
+        padding: 40px;
+       
+    }
+    
+}
