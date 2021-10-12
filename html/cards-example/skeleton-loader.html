@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skeleton Loader</title>
+    <link rel="stylesheet" href="../../css/cards-example/skeleton-loader.css">
+</head>
+<body>
+
+    <h1>skeleton Card</h1>
+    <div class="container">
+        <div class="card">
+            <div class="card-img skeleton">
+            </div>
+            <div class="card-details">
+                <div class="user-img skeleton">
+                </div>
+                <div class="user-details ">
+                    <div class="username skeleton skeletoncover"></div>
+                    <div class="useremail skeleton skeletoncover"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <h1>skeleton-loader</h1>
+    <div class="skeleton-loader" ></div>
+
+    <hr style="margin-top: 12px; margin-bottom: 12px;">
+      <h3> Skeleton loader after text/data loaded</h3>
+       
+   
+
+        <div class="skeleton-loader" id="fullName"></div>
+
+        <script>
+            const skeletonLoaderIndicator = document.querySelector('#fullName');
+
+            setTimeout(()=>{
+               skeletonLoaderIndicator.innerText = "Text has been loaded"
+            },2000)
+        </script>
+</body>
+</html>
